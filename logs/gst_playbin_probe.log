@@ -1,0 +1,157 @@
+パイプラインを一時停止 (PAUSED) にしています...
+Pipeline is PREROLLING ...
+Got message #1 from element "streamsynchronizer0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #2 from element "playsink" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #3 from element "playbin0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #7 from element "streamsynchronizer0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #8 from element "fakesink1" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #9 from element "fakesink0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #10 from element "uridecodebin0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #14 from element "source" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #19 from element "typefind" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #20 from element "decodebin0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #26 from pad "typefind:sink" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstTypeFindElement\)\ typefind", object=(GstTask)"\(GstTask\)\ typefind:sink";
+Got message #27 from element "typefind" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #28 from pad "typefind:sink" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstTypeFindElement\)\ typefind", object=(GstTask)"\(GstTask\)\ typefind:sink";
+Got message #29 from element "source" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #45 from element "qtdemux0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #46 from pad "qtdemux0:sink" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstQTDemux\)\ qtdemux0", object=(GstTask)"\(GstTask\)\ qtdemux0:sink";
+Got message #47 from element "qtdemux0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #48 from pad "qtdemux0:sink" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstQTDemux\)\ qtdemux0", object=(GstTask)"\(GstTask\)\ qtdemux0:sink";
+Got message #58 from pad "multiqueue0:src_0" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstMultiQueue\)\ multiqueue0", object=(GstTask)"\(GstTask\)\ multiqueue0:src_0";
+Got message #60 from pad "multiqueue0:src_0" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstMultiQueue\)\ multiqueue0", object=(GstTask)"\(GstTask\)\ multiqueue0:src_0";
+Got message #76 from element "h264parse0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #91 from element "h264parse0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #99 from pad "multiqueue0:src_1" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstMultiQueue\)\ multiqueue0", object=(GstTask)"\(GstTask\)\ task3";
+Got message #102 from pad "multiqueue0:src_1" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstMultiQueue\)\ multiqueue0", object=(GstTask)"\(GstTask\)\ multiqueue0:src_1";
+Got message #117 from element "aacparse0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #121 from element "aacparse0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #143 from element "avdec_aac0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #147 from element "avdec_aac0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #160 from element "h264parse0" (latency): no message details
+Redistribute latency...
+Got message #185 from element "vtdechw0" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #189 from pad "vtdechw0:src" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstVtdecHw\)\ vtdechw0", object=(GstTask)"\(GstTask\)\ vtdechw0:src";
+Got message #191 from element "vtdechw0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #190 from pad "vtdechw0:src" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstVtdecHw\)\ vtdechw0", object=(GstTask)"\(GstTask\)\ vtdechw0:src";
+Got message #192 from element "vtdechw0" (latency): no message details
+Redistribute latency...
+Got message #211 from element "audiotee" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #212 from element "audiotee" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #224 from element "decodebin0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #226 from element "uridecodebin0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #228 from element "h264parse0" (duration-changed): GstMessageDurationChanged;
+Got message #262 from element "deinterlace" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #263 from element "vdconv" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #264 from element "vdbin" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #265 from element "deinterlace" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #266 from element "vdconv" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #267 from element "vdbin" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #273 from element "conv2" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #274 from element "videobalance" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #275 from element "scale" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #276 from element "conv" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #277 from element "identity" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #278 from element "vconv" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #279 from element "vqueue" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #280 from element "vbin" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #288 from element "conv2" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #289 from element "videobalance" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #290 from element "scale" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #291 from element "conv" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #292 from element "identity" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #293 from element "vconv" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #294 from pad "vqueue:src" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstQueue\)\ vqueue", object=(GstTask)"\(GstTask\)\ vqueue:src";
+Got message #295 from pad "vqueue:src" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstQueue\)\ vqueue", object=(GstTask)"\(GstTask\)\ vqueue:src";
+Got message #296 from element "vqueue" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #319 from element "volume" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #320 from element "resample" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #321 from element "conv" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #322 from element "identity" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #323 from element "aconv" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #324 from element "aqueue" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)void-pending;
+Got message #325 from element "abin" (state-changed): GstMessageStateChanged, old-state=(GstState)null, new-state=(GstState)ready, pending-state=(GstState)paused;
+Got message #333 from element "volume" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #334 from element "resample" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #335 from element "conv" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #336 from element "identity" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #337 from element "aconv" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #338 from pad "aqueue:src" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)create, owner=(GstElement)"\(GstQueue\)\ aqueue", object=(GstTask)"\(GstTask\)\ aqueue:src";
+Got message #339 from element "aqueue" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #342 from pad "aqueue:src" (stream-status): GstMessageStreamStatus, type=(GstStreamStatusType)enter, owner=(GstElement)"\(GstQueue\)\ aqueue", object=(GstTask)"\(GstTask\)\ aqueue:src";
+Got message #49 from element "playbin0" (stream-start): GstMessageStreamStart, group-id=(uint)2;
+Got message #370 from element "fakesink1" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ audio-codec\=\(string\)\"MPEG-4\\\ AAC\\\ audio\"\,\ maximum-bitrate\=\(uint\)140169\,\ bitrate\=\(uint\)140169\,\ container-specific-track-id\=\(string\)2\;";
+Got message #373 from element "fakesink1" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ encoder\=\(string\)Google\,\ container-format\=\(string\)\"ISO\\\ MP4/M4A\"\;";
+Got message #374 from element "fakesink1" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ audio-codec\=\(string\)\"MPEG-4\\\ AAC\"\,\ maximum-bitrate\=\(uint\)140169\,\ bitrate\=\(uint\)140169\,\ container-specific-track-id\=\(string\)2\;";
+Got message #375 from element "fakesink1" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #378 from element "abin" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #379 from element "fakesink1" (latency): no message details
+Redistribute latency...
+Got message #410 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ /\\\ AVC\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\;";
+Got message #411 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ encoder\=\(string\)Google\,\ container-format\=\(string\)\"ISO\\\ MP4/M4A\"\;";
+Got message #412 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\;";
+Got message #413 from element "fakesink0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #416 from element "vbin" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #418 from element "playsink" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Got message #420 from element "playbin0" (state-changed): GstMessageStateChanged, old-state=(GstState)ready, new-state=(GstState)paused, pending-state=(GstState)void-pending;
+Pipeline is PREROLLED ...
+パイプラインを再生中 (PLAYING) にしています...
+Got message #419 from element "playbin0" (async-done): GstMessageAsyncDone, running-time=(guint64)18446744073709551615;
+Got message #421 from element "fakesink0" (latency): no message details
+Redistribute latency...
+Got message #422 from element "playbin0" (new-clock): GstMessageNewClock, clock=(GstClock)"\(GstSystemClock\)\ GstSystemClock";
+New clock: GstSystemClock
+Got message #426 from element "fakesink1" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #427 from element "volume" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #428 from element "resample" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #429 from element "conv" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #430 from element "identity" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #431 from element "aconv" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #432 from element "aqueue" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #433 from element "abin" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #434 from element "fakesink0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #435 from element "conv2" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #436 from element "videobalance" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #437 from element "scale" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #438 from element "fakesink1" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ audio-codec\=\(string\)\"MPEG-4\\\ AAC\"\,\ maximum-bitrate\=\(uint\)140169\,\ bitrate\=\(uint\)140169\,\ container-specific-track-id\=\(string\)2\,\ minimum-bitrate\=\(uint\)141750\;";
+Got message #439 from element "conv" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #440 from element "identity" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #441 from element "vconv" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #442 from element "vqueue" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #443 from element "vbin" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #444 from element "deinterlace" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #445 from element "vdconv" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #446 from element "fakesink1" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ audio-codec\=\(string\)\"MPEG-4\\\ AAC\"\,\ maximum-bitrate\=\(uint\)140169\,\ bitrate\=\(uint\)140169\,\ container-specific-track-id\=\(string\)2\,\ minimum-bitrate\=\(uint\)141000\;";
+Got message #447 from element "vdbin" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #448 from element "streamsynchronizer0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #449 from element "audiotee" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #450 from element "playsink" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #451 from element "inputselector1" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #452 from element "inputselector0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #453 from element "fakesink1" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ audio-codec\=\(string\)\"MPEG-4\\\ AAC\"\,\ maximum-bitrate\=\(uint\)140169\,\ bitrate\=\(uint\)140169\,\ container-specific-track-id\=\(string\)2\,\ minimum-bitrate\=\(uint\)118875\;";
+Got message #454 from element "vtdechw0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #455 from element "capsfilter0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #456 from element "h264parse0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #457 from element "avdec_aac0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #458 from element "aacparse0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #459 from element "multiqueue0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #460 from element "qtdemux0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #461 from element "typefind" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #462 from element "decodebin0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #463 from element "source" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #464 from element "uridecodebin0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #465 from element "playbin0" (state-changed): GstMessageStateChanged, old-state=(GstState)paused, new-state=(GstState)playing, pending-state=(GstState)void-pending;
+Got message #481 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)11806464\;";
+Got message #483 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)3502656\;";
+Got message #484 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)1741248\;";
+Got message #488 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)1641024\;";
+Got message #494 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)1490688\;";
+Got message #498 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)1397952\;";
+Got message #500 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)1295040\;";
+Got message #504 from element "fakesink0" (tag): GstMessageTag, taglist=(taglist)"taglist\,\ video-codec\=\(string\)\"H.264\\\ \\\(High\\\ Profile\\\)\"\,\ maximum-bitrate\=\(uint\)4799834\,\ bitrate\=\(uint\)4799834\,\ container-specific-track-id\=\(string\)1\,\ minimum-bitrate\=\(uint\)1292544\;";
+0:00:00.338329958      27961      0x16e13b000 WARN            videodecoder gstvideodecoder.c:3184:gst_video_decoder_prepare_finish_frame:<vtdechw0> decreasing timestamp (0:00:07.875000000 < 0:00:07.916666666)
+Got message #148 from element "playbin0" (eos): no message details
+Got EOS from element "playbin0".
+Execution ended after 0:00:00.140777167
+Setting pipeline to NULL ...
+Freeing pipeline ...

@@ -1,0 +1,17 @@
+[package]
+name = "movie_player"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gio = { version = "0.20", optional = true }
+glib = { version = "0.20", optional = true }
+gtk4 = { version = "0.9", optional = true }
+rfd = { version = "0.15", optional = true }
+gstreamer = { version = "0.23", optional = true }
+
+[features]
+# GUI feature enables GTK4-based UI. It's optional so the crate can build on
+# systems without GTK installed. Use `--features gui` to enable.
+default = ["gui"]
+gui = ["gtk4", "gio", "glib", "rfd", "gstreamer"]

@@ -1,0 +1,329 @@
+
+(gst-plugin-scanner:27771): GLib-GIRepository-WARNING **: 06:47:11.209: Failed to load shared library 'libgobject-2.0.0.dylib' referenced by the typelib: dlopen(libgobject-2.0.0.dylib, 0x0009): tried: 'libgobject-2.0.0.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibgobject-2.0.0.dylib' (no such file), '/usr/lib/libgobject-2.0.0.dylib' (no such file, not in dyld cache), 'libgobject-2.0.0.dylib' (no such file)
+
+(gst-plugin-scanner:27771): GLib-GIRepository-WARNING **: 06:47:11.210: Failed to load shared library 'libglib-2.0.0.dylib' referenced by the typelib: dlopen(libglib-2.0.0.dylib, 0x0009): tried: 'libglib-2.0.0.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibglib-2.0.0.dylib' (no such file), '/usr/lib/libglib-2.0.0.dylib' (no such file, not in dyld cache), 'libglib-2.0.0.dylib' (no such file)
+
+** (gst-plugin-scanner:27771): CRITICAL **: 06:47:11.211: can't find gi.repository.Gst
+objc[27771]: Class ResultReceiver is implemented in both /opt/homebrew/Cellar/gtk+3/3.24.51/lib/libgtk-3.0.dylib (0x1088fd748) and /opt/homebrew/Cellar/gtk4/4.22.1/lib/libgtk-4.1.dylib (0x11cf96b70). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[27771]: Class GtkApplicationQuartzDelegate is implemented in both /opt/homebrew/Cellar/gtk+3/3.24.51/lib/libgtk-3.0.dylib (0x1088fd770) and /opt/homebrew/Cellar/gtk4/4.22.1/lib/libgtk-4.1.dylib (0x11cf96b98). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[27771]: Class GNSMenuItem is implemented in both /opt/homebrew/Cellar/gtk+3/3.24.51/lib/libgtk-3.0.dylib (0x1088fd7c0) and /opt/homebrew/Cellar/gtk4/4.22.1/lib/libgtk-4.1.dylib (0x11cf96c38). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[27771]: Class GNSMenu is implemented in both /opt/homebrew/Cellar/gtk+3/3.24.51/lib/libgtk-3.0.dylib (0x1088fd7e8) and /opt/homebrew/Cellar/gtk4/4.22.1/lib/libgtk-4.1.dylib (0x11cf96c60). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[27771]: Class FilterComboBox is implemented in both /opt/homebrew/Cellar/gtk+3/3.24.51/lib/libgtk-3.0.dylib (0x1088fd860) and /opt/homebrew/Cellar/gtk4/4.22.1/lib/libgtk-4.1.dylib (0x11cf96cd8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[27771]: Class gdkCoreCursor is implemented in both /opt/homebrew/Cellar/gtk+3/3.24.51/lib/libgdk-3.0.dylib (0x107959258) and /opt/homebrew/Cellar/gtk4/4.22.1/lib/libgtk-4.1.dylib (0x11cf96d28). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+Factory Details:
+  Rank                     none (0)
+  Long-name                Player Bin 2
+  Klass                    Generic/Bin/Player
+  Description              Autoplug and play media from an uri
+  Author                   Wim Taymans <wim.taymans@gmail.com>
+  Documentation            https://gstreamer.freedesktop.org/documentation/playback/playbin.html
+
+Plugin Details:
+  Name                     playback
+  Description              various playback elements
+  Filename                 /opt/homebrew/Cellar/gstreamer/1.28.1/lib/gstreamer-1.0/libgstplayback.dylib
+  Version                  1.28.1
+  License                  LGPL
+  Source module            gst-plugins-base
+  Documentation            https://gstreamer.freedesktop.org/documentation/playback/
+  Source release date      2026-02-26
+  Binary package           GStreamer Base Plug-ins source release
+  Origin URL               https://github.com/Homebrew/homebrew-core
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBin
+                         +----GstPipeline
+                               +----GstPlayBin
+
+Implemented Interfaces:
+  GstChildProxy
+  GstStreamVolume
+  GstVideoOverlay
+  GstNavigation
+  GstColorBalance
+
+Element Flags:
+  - SINK
+
+Pad Templates:
+  none
+
+Element has no clocking capabilities.
+Element has no URI handling capabilities.
+
+Pads:
+  none
+
+Element Properties:
+
+  async-handling      : The bin will handle Asynchronous state changes
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: false
+  
+  audio-filter        : the audio filter(s) to apply, if possible
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  audio-sink          : the audio output element to use (NULL = default sink)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  audio-stream-combiner: Current audio stream combiner (NULL = input-selector)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  auto-flush-bus      : Whether to automatically flush the pipeline's bus when going from READY into NULL state
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  av-offset           : The synchronisation offset between audio and video in nanoseconds
+                        flags: 読み込み可能, 書き込み可能
+                        Integer64. Range: -9223372036854775808 - 9223372036854775807 Default: 0 
+  
+  buffer-duration     : Buffer duration when buffering network streams
+                        flags: 読み込み可能, 書き込み可能
+                        Integer64. Range: -1 - 9223372036854775807 Default: -1 
+  
+  buffer-size         : Buffer size when buffering network streams
+                        flags: 読み込み可能, 書き込み可能
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  
+  connection-speed    : Network connection speed in kbps (0 = unknown)
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551 Default: 0 
+  
+  current-audio       : Currently playing audio stream (-1 = auto)
+                        flags: 読み込み可能, 書き込み可能
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  
+  current-suburi      : The currently playing URI of a subtitle
+                        flags: 読み込み可能
+                        String. Default: null
+  
+  current-text        : Currently playing text stream (-1 = auto)
+                        flags: 読み込み可能, 書き込み可能
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  
+  current-uri         : The currently playing URI
+                        flags: 読み込み可能
+                        String. Default: null
+  
+  current-video       : Currently playing video stream (-1 = auto)
+                        flags: 読み込み可能, 書き込み可能
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  
+  delay               : Expected delay needed for elements to spin up to PLAYING in nanoseconds
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  
+  flags               : Flags to control behaviour
+                        flags: 読み込み可能, 書き込み可能
+                        Flags "GstPlayFlags" Default: 0x00000617, "soft-colorbalance+deinterlace+soft-volume+text+audio+video"
+                           (0x00000001): video            - Render the video stream
+                           (0x00000002): audio            - Render the audio stream
+                           (0x00000004): text             - Render subtitles
+                           (0x00000008): vis              - Render visualisation when no video is present
+                           (0x00000010): soft-volume      - Use software volume
+                           (0x00000020): native-audio     - Only use native audio formats
+                           (0x00000040): native-video     - Only use native video formats
+                           (0x00000080): download         - Attempt progressive download buffering
+                           (0x00000100): buffering        - Buffer demuxed/parsed data
+                           (0x00000200): deinterlace      - Deinterlace video if necessary
+                           (0x00000400): soft-colorbalance - Use software color balance
+                           (0x00000800): force-filters    - Force audio/video filter(s) to be applied
+                           (0x00001000): force-sw-decoders - Force only software-based decoders (no effect for playbin3)
+  
+  force-aspect-ratio  : When enabled, scaling will respect original aspect ratio
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  latency             : Latency to configure on the pipeline
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 18446744073709551615 
+  
+  message-forward     : Forwards all children messages
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: false
+  
+  mute                : Mute the audio channel without changing the volume
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: false
+  
+  n-audio             : Total number of audio streams
+                        flags: 読み込み可能
+                        Integer. Range: 0 - 2147483647 Default: 0 
+  
+  n-text              : Total number of text streams
+                        flags: 読み込み可能
+                        Integer. Range: 0 - 2147483647 Default: 0 
+  
+  n-video             : Total number of video streams
+                        flags: 読み込み可能
+                        Integer. Range: 0 - 2147483647 Default: 0 
+  
+  name                : The name of the object
+                        flags: 読み込み可能, 書き込み可能
+                        String. Default: "playbin0"
+  
+  parent              : The parent of the object
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstObject"
+  
+  ring-buffer-max-size: Max. amount of data in the ring buffer (bytes, 0 = ring buffer disabled)
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 4294967295 Default: 0 
+  
+  sample              : The last sample (NULL = no video available)
+                        flags: 読み込み可能
+                        Boxed pointer of type "GstSample"
+  
+  source              : Source element
+                        flags: 読み込み可能
+                        Object of type "GstElement"
+  
+  subtitle-encoding   : Encoding to assume if input subtitles are not in UTF-8 encoding. If not set, the GST_SUBTITLE_ENCODING environment variable will be checked for an encoding to use. If that is not set either, ISO-8859-15 will be assumed.
+                        flags: 読み込み可能, 書き込み可能
+                        String. Default: null
+  
+  subtitle-font-desc  : Pango font description of font to be used for subtitle rendering
+                        flags: 書き込み可能
+                        String. Default: null Write only
+  
+  suburi              : Optional URI of a subtitle
+                        flags: 読み込み可能, 書き込み可能
+                        String. Default: null
+  
+  text-offset         : The synchronisation offset between text and video in nanoseconds
+                        flags: 読み込み可能, 書き込み可能
+                        Integer64. Range: -9223372036854775808 - 9223372036854775807 Default: 0 
+  
+  text-sink           : the text output element to use (NULL = default subtitleoverlay)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  text-stream-combiner: Current text stream combiner (NULL = input-selector)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  uri                 : URI of the media to play
+                        flags: 読み込み可能, 書き込み可能
+                        String. Default: null
+  
+  video-filter        : the video filter(s) to apply, if possible
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  video-multiview-flags: Override details of the multiview frame layout
+                        flags: 読み込み可能, 書き込み可能
+                        Flags "GstVideoMultiviewFlags" Default: 0x00000000, "none"
+                           (0x00000000): none             - GST_VIDEO_MULTIVIEW_FLAGS_NONE
+                           (0x00000001): right-view-first - GST_VIDEO_MULTIVIEW_FLAGS_RIGHT_VIEW_FIRST
+                           (0x00000002): left-flipped     - GST_VIDEO_MULTIVIEW_FLAGS_LEFT_FLIPPED
+                           (0x00000004): left-flopped     - GST_VIDEO_MULTIVIEW_FLAGS_LEFT_FLOPPED
+                           (0x00000008): right-flipped    - GST_VIDEO_MULTIVIEW_FLAGS_RIGHT_FLIPPED
+                           (0x00000010): right-flopped    - GST_VIDEO_MULTIVIEW_FLAGS_RIGHT_FLOPPED
+                           (0x00004000): half-aspect      - GST_VIDEO_MULTIVIEW_FLAGS_HALF_ASPECT
+                           (0x00008000): mixed-mono       - GST_VIDEO_MULTIVIEW_FLAGS_MIXED_MONO
+  
+  video-multiview-mode: Re-interpret a video stream as one of several frame-packed stereoscopic modes.
+                        flags: 読み込み可能, 書き込み可能
+                        Enum "GstVideoMultiviewFramePacking" Default: -1, "none"
+                           (-1): none             - GST_VIDEO_MULTIVIEW_FRAME_PACKING_NONE
+                           (0): mono             - GST_VIDEO_MULTIVIEW_FRAME_PACKING_MONO
+                           (1): left             - GST_VIDEO_MULTIVIEW_FRAME_PACKING_LEFT
+                           (2): right            - GST_VIDEO_MULTIVIEW_FRAME_PACKING_RIGHT
+                           (3): side-by-side     - GST_VIDEO_MULTIVIEW_FRAME_PACKING_SIDE_BY_SIDE
+                           (4): side-by-side-quincunx - GST_VIDEO_MULTIVIEW_FRAME_PACKING_SIDE_BY_SIDE_QUINCUNX
+                           (5): column-interleaved - GST_VIDEO_MULTIVIEW_FRAME_PACKING_COLUMN_INTERLEAVED
+                           (6): row-interleaved  - GST_VIDEO_MULTIVIEW_FRAME_PACKING_ROW_INTERLEAVED
+                           (7): top-bottom       - GST_VIDEO_MULTIVIEW_FRAME_PACKING_TOP_BOTTOM
+                           (8): checkerboard     - GST_VIDEO_MULTIVIEW_FRAME_PACKING_CHECKERBOARD
+  
+  video-sink          : the video output element to use (NULL = default sink)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  video-stream-combiner: Current video stream combiner (NULL = input-selector)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  vis-plugin          : the visualization element to use (NULL = default)
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstElement"
+  
+  volume              : The audio volume, 1.0=100%
+                        flags: 読み込み可能, 書き込み可能
+                        Double. Range:               0 -              10 Default:               1 
+  
+
+Element Signals:
+
+  "about-to-finish" :  void user_function (GstElement * object,
+                                           gpointer user_data);
+
+  "video-changed" :  void user_function (GstElement * object,
+                                         gpointer user_data);
+
+  "audio-changed" :  void user_function (GstElement * object,
+                                         gpointer user_data);
+
+  "text-changed" :  void user_function (GstElement * object,
+                                        gpointer user_data);
+
+  "video-tags-changed" :  void user_function (GstElement * object,
+                                              gint arg0,
+                                              gpointer user_data);
+
+  "audio-tags-changed" :  void user_function (GstElement * object,
+                                              gint arg0,
+                                              gpointer user_data);
+
+  "text-tags-changed" :  void user_function (GstElement * object,
+                                             gint arg0,
+                                             gpointer user_data);
+
+  "source-setup" :  void user_function (GstElement * object,
+                                        GstElement * arg0,
+                                        gpointer user_data);
+
+  "element-setup" :  void user_function (GstElement * object,
+                                         GstElement * arg0,
+                                         gpointer user_data);
+
+
+Element Actions:
+
+  "get-video-tags" -> GstTagList  * :  g_signal_emit_by_name (element, "get-video-tags",
+                                                              gint arg0,
+                                                              GstTagList * * p_return_value);
+
+  "get-audio-tags" -> GstTagList  * :  g_signal_emit_by_name (element, "get-audio-tags",
+                                                              gint arg0,
+                                                              GstTagList * * p_return_value);
+
+  "get-text-tags" -> GstTagList  * :  g_signal_emit_by_name (element, "get-text-tags",
+                                                             gint arg0,
+                                                             GstTagList * * p_return_value);
+
+  "convert-sample" -> GstSample  * :  g_signal_emit_by_name (element, "convert-sample",
+                                                             GstCaps * arg0,
+                                                             GstSample * * p_return_value);
+
+  "get-video-pad" -> GstPad  * :  g_signal_emit_by_name (element, "get-video-pad",
+                                                         gint arg0,
+                                                         GstPad * * p_return_value);
+
+  "get-audio-pad" -> GstPad  * :  g_signal_emit_by_name (element, "get-audio-pad",
+                                                         gint arg0,
+                                                         GstPad * * p_return_value);
+
+  "get-text-pad" -> GstPad  * :  g_signal_emit_by_name (element, "get-text-pad",
+                                                        gint arg0,
+                                                        GstPad * * p_return_value);
+
+
+Children:
+  playsink

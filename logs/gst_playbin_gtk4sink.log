@@ -1,0 +1,8 @@
+パイプラインを一時停止 (PAUSED) にしています...
+
+thread '<unnamed>' (412473) panicked at /Users/brew/Library/Caches/Homebrew/cargo_cache/git/checkouts/gtk4-rs-ff2bc21858344a74/12259c6/gtk4/src/rt.rs:107:13:
+assertion `left != right` failed: Attempted to initialize GTK on OSX from non-main thread
+  left: 0
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+fatal runtime error: failed to initiate panic, error 5, aborting

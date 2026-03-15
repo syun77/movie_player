@@ -1,0 +1,162 @@
+Factory Details:
+  Rank                     none (0)
+  Long-name                GTK 4 Paintable Sink
+  Klass                    Sink/Video
+  Description              A GTK 4 Paintable sink
+  Author                   Bilal Elmoussaoui <bil.elmoussaoui@gmail.com>, Jordan Petridis <jordan@centricular.com>, Sebastian Dröge <sebastian@centricular.com>
+  Documentation            https://gstreamer.freedesktop.org/documentation/gtk4/#gtk4paintablesink-page
+
+Plugin Details:
+  Name                     gtk4
+  Description              GStreamer GTK 4 sink element
+  Filename                 /opt/homebrew/Cellar/gstreamer/1.28.1/lib/gstreamer-1.0/libgstgtk4.dylib
+  Version                  0.15.0-RELEASE
+  License                  MPL
+  Source module            gst-plugin-gtk4
+  Documentation            https://gstreamer.freedesktop.org/documentation/gtk4/
+  Source release date      2026-02-25
+  Binary package           gst-plugin-gtk4
+  Origin URL               https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseSink
+                         +----GstVideoSink
+                               +----GstGtk4PaintableSink
+
+Implemented Interfaces:
+  GstChildProxy
+
+Element Flags:
+  - SINK
+
+Pad Templates:
+  SINK template: 'sink'
+    Availability: Always
+    Capabilities:
+      video/x-raw(memory:GLMemory, meta:GstVideoOverlayComposition)
+                 format: { (string)RGBA, (string)RGB } (GstValueList)
+                  width: [ 1, 2147483647 ] (GstIntRange)
+                 height: [ 1, 2147483647 ] (GstIntRange)
+              framerate: [ 0/1, 2147483647/1 ] (GstFractionRange)
+         texture-target: 2D (gchararray)
+      video/x-raw(memory:GLMemory)
+                 format: { (string)RGBA, (string)RGB } (GstValueList)
+                  width: [ 1, 2147483647 ] (GstIntRange)
+                 height: [ 1, 2147483647 ] (GstIntRange)
+              framerate: [ 0/1, 2147483647/1 ] (GstFractionRange)
+         texture-target: 2D (gchararray)
+      video/x-raw(memory:SystemMemory, meta:GstVideoOverlayComposition)
+                 format: { (string)YUY2, (string)YVYU, (string)UYVY, (string)VYUY, (string)NV12, (string)NV21, (string)NV16, (string)NV61, (string)NV24, (string)P010_10LE, (string)P010_10BE, (string)P012_LE, (string)P012_BE, (string)P016_LE, (string)P016_BE, (string)YUV9, (string)YVU9, (string)Y41B, (string)I420, (string)YV12, (string)Y42B, (string)Y444, (string)I420_10LE, (string)I420_10BE, (string)I422_10LE, (string)I422_10BE, (string)Y444_10LE, (string)Y444_10BE, (string)I420_12LE, (string)I420_12BE, (string)I422_12LE, (string)I422_12BE, (string)Y444_12LE, (string)Y444_12BE, (string)Y444_16LE, (string)Y444_16BE, (string)BGRx, (string)xRGB, (string)RGBx, (string)xBGR, (string)BGRA, (string)ARGB, (string)RGBA, (string)ABGR, (string)RGB, (string)BGR } (GstValueList)
+                  width: [ 1, 2147483647 ] (GstIntRange)
+                 height: [ 1, 2147483647 ] (GstIntRange)
+              framerate: [ 0/1, 2147483647/1 ] (GstFractionRange)
+      video/x-raw(meta:GstVideoOverlayComposition)
+                 format: { (string)YUY2, (string)YVYU, (string)UYVY, (string)VYUY, (string)NV12, (string)NV21, (string)NV16, (string)NV61, (string)NV24, (string)P010_10LE, (string)P010_10BE, (string)P012_LE, (string)P012_BE, (string)P016_LE, (string)P016_BE, (string)YUV9, (string)YVU9, (string)Y41B, (string)I420, (string)YV12, (string)Y42B, (string)Y444, (string)I420_10LE, (string)I420_10BE, (string)I422_10LE, (string)I422_10BE, (string)Y444_10LE, (string)Y444_10BE, (string)I420_12LE, (string)I420_12BE, (string)I422_12LE, (string)I422_12BE, (string)Y444_12LE, (string)Y444_12BE, (string)Y444_16LE, (string)Y444_16BE, (string)BGRx, (string)xRGB, (string)RGBx, (string)xBGR, (string)BGRA, (string)ARGB, (string)RGBA, (string)ABGR, (string)RGB, (string)BGR } (GstValueList)
+                  width: [ 1, 2147483647 ] (GstIntRange)
+                 height: [ 1, 2147483647 ] (GstIntRange)
+              framerate: [ 0/1, 2147483647/1 ] (GstFractionRange)
+      video/x-raw
+                 format: { (string)YUY2, (string)YVYU, (string)UYVY, (string)VYUY, (string)NV12, (string)NV21, (string)NV16, (string)NV61, (string)NV24, (string)P010_10LE, (string)P010_10BE, (string)P012_LE, (string)P012_BE, (string)P016_LE, (string)P016_BE, (string)YUV9, (string)YVU9, (string)Y41B, (string)I420, (string)YV12, (string)Y42B, (string)Y444, (string)I420_10LE, (string)I420_10BE, (string)I422_10LE, (string)I422_10BE, (string)Y444_10LE, (string)Y444_10BE, (string)I420_12LE, (string)I420_12BE, (string)I422_12LE, (string)I422_12BE, (string)Y444_12LE, (string)Y444_12BE, (string)Y444_16LE, (string)Y444_16BE, (string)BGRx, (string)xRGB, (string)RGBx, (string)xBGR, (string)BGRA, (string)ARGB, (string)RGBA, (string)ABGR, (string)RGB, (string)BGR } (GstValueList)
+                  width: [ 1, 2147483647 ] (GstIntRange)
+                 height: [ 1, 2147483647 ] (GstIntRange)
+              framerate: [ 0/1, 2147483647/1 ] (GstFractionRange)
+
+Element has no clocking capabilities.
+Element has no URI handling capabilities.
+
+Pads:
+  SINK: 'sink'
+    Pad Template: 'sink'
+
+Element Properties:
+
+  async               : Go asynchronously to PAUSED
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  blocksize           : Size in bytes to pull per buffer (0 = default)
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer. Range: 0 - 4294967295 Default: 4096 
+  
+  enable-last-sample  : Enable the last-sample property
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  last-sample         : The last sample received in the sink
+                        flags: 読み込み可能
+                        Boxed pointer of type "GstSample"
+  
+  max-bitrate         : The maximum bits per second to render (0 = disabled)
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  
+  max-lateness        : Maximum number of nanoseconds that a buffer can be late before it is dropped (-1 unlimited)
+                        flags: 読み込み可能, 書き込み可能
+                        Integer64. Range: -1 - 9223372036854775807 Default: 5000000 
+  
+  name                : The name of the object
+                        flags: 読み込み可能, 書き込み可能
+                        String. Default: "gtk4paintablesink0"
+  
+  paintable           : The Paintable the sink renders to
+                        flags: 読み込み可能
+                        Object of type "GstGtk4Paintable"
+  
+  parent              : The parent of the object
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstObject"
+  
+  processing-deadline : Maximum processing time for a buffer in nanoseconds
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 15000000 
+  
+  qos                 : Generate Quality-of-Service events upstream
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  reconfigure-on-window-resize: send reconfigure event to upstream elements whenever window-width or window-height changes
+                        flags: 読み込み可能, 書き込み可能, changeable in NULL, READY, PAUSED or PLAYING state
+                        Enum "GstGtk4PaintableSinkReconfigureMode" Default: 2, "overlay-only"
+                           (0): never            - Never
+                           (1): always           - Always
+                           (2): overlay-only     - OverlayOnly
+  
+  render-delay        : Additional render delay of the sink in nanoseconds
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  
+  show-preroll-frame  : Whether to render video frames during preroll
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  stats               : Sink Statistics
+                        flags: 読み込み可能
+                        Boxed pointer of type "GstStructure"
+                                                        average-rate: 0 (gdouble)
+                                                             dropped: 0 (guint64)
+                                                            rendered: 0 (guint64)
+
+  
+  sync                : Sync on the clock
+                        flags: 読み込み可能, 書き込み可能
+                        Boolean. Default: true
+  
+  throttle-time       : The time to keep between rendered buffers (0 = disabled)
+                        flags: 読み込み可能, 書き込み可能
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  
+  ts-offset           : Timestamp offset in nanoseconds
+                        flags: 読み込み可能, 書き込み可能
+                        Integer64. Range: -9223372036854775808 - 9223372036854775807 Default: 0 
+  
+  window-height       : the height of the main widget rendering the paintable
+                        flags: 読み込み可能, 書き込み可能, changeable in NULL, READY, PAUSED or PLAYING state
+                        Unsigned Integer. Range: 0 - 4294967295 Default: 0 
+  
+  window-width        : the width of the main widget rendering the paintable
+                        flags: 読み込み可能, 書き込み可能, changeable in NULL, READY, PAUSED or PLAYING state
+                        Unsigned Integer. Range: 0 - 4294967295 Default: 0 
+  

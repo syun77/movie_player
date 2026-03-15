@@ -1,0 +1,84 @@
+Factory Details:
+  Rank                     primary (256)
+  Long-name                QuickTime demuxer
+  Klass                    Codec/Demuxer
+  Description              Demultiplex a QuickTime file into audio and video streams
+  Author                   David Schleef <ds@schleef.org>, Wim Taymans <wim@fluendo.com>
+  Documentation            https://gstreamer.freedesktop.org/documentation/isomp4/qtdemux.html
+
+Plugin Details:
+  Name                     isomp4
+  Description              ISO base media file format support (mp4, 3gpp, qt, mj2)
+  Filename                 /opt/homebrew/Cellar/gstreamer/1.28.1/lib/gstreamer-1.0/libgstisomp4.dylib
+  Version                  1.28.1
+  License                  LGPL
+  Source module            gst-plugins-good
+  Documentation            https://gstreamer.freedesktop.org/documentation/isomp4/
+  Source release date      2026-02-26
+  Binary package           GStreamer Good Plug-ins source release
+  Origin URL               https://github.com/Homebrew/homebrew-core
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstQTDemux
+
+Element Flags:
+  - REQUIRE_INDEXABLE
+
+Pad Templates:
+  SRC template: 'audio_%u'
+    Availability: Sometimes
+    Capabilities:
+      ANY
+  
+  SINK template: 'sink'
+    Availability: Always
+    Capabilities:
+      video/quicktime
+      video/mj2
+      audio/x-m4a
+      application/x-3gp
+  
+  SRC template: 'subtitle_%u'
+    Availability: Sometimes
+    Capabilities:
+      ANY
+  
+  SRC template: 'video_%u'
+    Availability: Sometimes
+    Capabilities:
+      ANY
+
+Element has no clocking capabilities.
+Element has no URI handling capabilities.
+
+Pads:
+  SINK: 'sink'
+    Pad Template: 'sink'
+
+Element Properties:
+
+  name                : The name of the object
+                        flags: 読み込み可能, 書き込み可能
+                        String. Default: "qtdemux0"
+  
+  parent              : The parent of the object
+                        flags: 読み込み可能, 書き込み可能
+                        Object of type "GstObject"
+  
+
+Element Signals:
+
+  "pad-added" :  void user_function (GstElement * object,
+                                     GstPad * arg0,
+                                     gpointer user_data);
+
+  "pad-removed" :  void user_function (GstElement * object,
+                                       GstPad * arg0,
+                                       gpointer user_data);
+
+  "no-more-pads" :  void user_function (GstElement * object,
+                                        gpointer user_data);
+
