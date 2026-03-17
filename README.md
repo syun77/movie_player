@@ -64,6 +64,17 @@ export PKG_CONFIG_PATH="/opt/homebrew/lib/pkgconfig:/opt/homebrew/share/pkgconfi
 
 Intel Macの場合は `/usr/local` 配下になることがあります。
 
+色味がくすむ（彩度が低い）場合は、GTK のレンダラー差異が原因のことがあります。
+このアプリでは macOS で既定レンダラーを `ngl` にしていますが、環境によっては切り替えが有効です。
+
+```bash
+# 既定（推奨）
+export GSK_RENDERER=ngl
+
+# もし描画不具合が出る場合のフォールバック
+export GSK_RENDERER=cairo
+```
+
 ## 起動方法
 
 ```bash

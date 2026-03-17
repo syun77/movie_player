@@ -12,9 +12,10 @@ mod gui {
     use gtk::gdk;
     use gtk::prelude::*;
     use gtk4 as gtk;
-    use std::cell::Cell;
+    use std::cell::{Cell, RefCell};
     use std::path::PathBuf;
     use std::rc::Rc;
+    use std::time::Duration;
 
     const SEEK_STEP_SECONDS: i64 = 10;
 
@@ -24,11 +25,15 @@ mod gui {
         seek_scale: gtk::Scale,
         time_label: gtk::Label,
         suppress_seek_signal: Cell<bool>,
+        user_seeking: Cell<bool>,
+        was_playing_before_seek: Cell<bool>,
+        seek_resume_timer: RefCell<Option<glib::SourceId>>,
     }
 
     impl PlayerUi {
         fn is_playing(&self) -> bool {
-            self.playbin.current_state() == gst::State::Playing
+            let (_, current, pending) = self.playbin.state(gst::ClockTime::from_seconds(0));
+            current == gst::State::Playing || pending == gst::State::Playing
         }
 
         fn duration_seconds(&self) -> f64 {
@@ -94,18 +99,20 @@ mod gui {
         }
 
         fn seek_to_seconds(&self, seconds: f64) {
-            let duration = self.duration_seconds() as i64;
-            let mut target = seconds as i64;
-            if target < 0 {
-                target = 0;
-            }
-            if duration > 0 {
-                target = target.min(duration);
+            let duration_ns = self
+                .playbin
+                .query_duration::<gst::ClockTime>()
+                .map(|d| d.nseconds() as i128)
+                .unwrap_or(0);
+
+            let mut target_ns = (seconds.max(0.0) * 1_000_000_000.0) as i128;
+            if duration_ns > 0 {
+                target_ns = target_ns.min(duration_ns);
             }
 
             let _ = self.playbin.seek_simple(
-                gst::SeekFlags::FLUSH | gst::SeekFlags::KEY_UNIT,
-                gst::ClockTime::from_seconds(target as u64),
+                gst::SeekFlags::FLUSH | gst::SeekFlags::KEY_UNIT | gst::SeekFlags::ACCURATE,
+                gst::ClockTime::from_nseconds(target_ns as u64),
             );
         }
 
@@ -114,9 +121,11 @@ mod gui {
             let duration_seconds = self.duration_seconds();
 
             self.seek_scale.set_range(0.0, duration_seconds.max(0.1));
-            self.suppress_seek_signal.set(true);
-            self.seek_scale.set_value(position_seconds.min(duration_seconds));
-            self.suppress_seek_signal.set(false);
+            if !self.user_seeking.get() {
+                self.suppress_seek_signal.set(true);
+                self.seek_scale.set_value(position_seconds.min(duration_seconds));
+                self.suppress_seek_signal.set(false);
+            }
 
             self.time_label.set_text(&format!(
                 "{} / {}",
@@ -240,6 +249,9 @@ mod gui {
             seek_scale: seek_scale.clone(),
             time_label: time_label.clone(),
             suppress_seek_signal: Cell::new(false),
+            user_seeking: Cell::new(false),
+            was_playing_before_seek: Cell::new(false),
+            seek_resume_timer: RefCell::new(None),
         });
 
         if let Some(bus) = playbin.bus() {
@@ -299,8 +311,43 @@ mod gui {
                 if ui.suppress_seek_signal.get() {
                     return;
                 }
+
+                if !ui.user_seeking.get() {
+                    ui.user_seeking.set(true);
+                    let was_playing = ui.is_playing();
+                    ui.was_playing_before_seek.set(was_playing);
+                    if was_playing {
+                        let _ = ui.playbin.set_state(gst::State::Paused);
+                        ui.play_pause_button.set_label("▶");
+                    }
+                }
+
                 ui.seek_to_seconds(scale.value());
-                ui.refresh_seek_ui();
+
+                ui.time_label.set_text(&format!(
+                    "{} / {}",
+                    format_time(scale.value() as i64),
+                    format_time(ui.duration_seconds() as i64)
+                ));
+
+                if let Some(source_id) = ui.seek_resume_timer.borrow_mut().take() {
+                    source_id.remove();
+                }
+
+                let ui_for_finalize = ui.clone();
+                let source_id = glib::timeout_add_local(Duration::from_millis(180), move || {
+                    ui_for_finalize.user_seeking.set(false);
+                    if ui_for_finalize.was_playing_before_seek.get() {
+                        let _ = ui_for_finalize.playbin.set_state(gst::State::Playing);
+                        ui_for_finalize.play_pause_button.set_label("⏸");
+                    } else {
+                        ui_for_finalize.play_pause_button.set_label("▶");
+                    }
+                    ui_for_finalize.refresh_seek_ui();
+                    *ui_for_finalize.seek_resume_timer.borrow_mut() = None;
+                    ControlFlow::Break
+                });
+                *ui.seek_resume_timer.borrow_mut() = Some(source_id);
             });
         }
 
@@ -381,7 +428,9 @@ mod gui {
 
         if cfg!(target_os = "macos") && std::env::var_os("GSK_RENDERER").is_none() {
             unsafe {
-                std::env::set_var("GSK_RENDERER", "cairo");
+                // On macOS, cairo fallback can make video colors look washed out.
+                // Prefer the GPU renderer unless the user explicitly overrides it.
+                std::env::set_var("GSK_RENDERER", "ngl");
             }
         }
 
